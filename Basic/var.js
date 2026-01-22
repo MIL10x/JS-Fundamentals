@@ -5,11 +5,15 @@
 // var a = 10;
 // var a = 10; //redclaring is available in var
 
+//in let and const not able to do redeclaration 
+
+
 
 //reassignment
 
 // a = 20; // reassignment also done in var
 
+//in const you cannot able to reassignment
 
 // global scoped
 
@@ -26,9 +30,17 @@
     // console.log(a.id);
     
 
- //hosting   
+//  hosting   
 
-// console.log(a);  //it throws undefined instead of error
+// Hoisting is JavaScript’s behavior of moving declarations to the top of their scope before code execution.
+
+// ⚠️ Important:
+
+// Only declarations are hoisted
+
+// Assignments are NOT hoisted
+
+//console.log(a);  //it throws undefined instead of error
 
 // var a = 10
 
