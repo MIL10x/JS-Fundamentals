@@ -40,6 +40,30 @@
 
 // console.log(numbers); 
 // console.log(result);  
+// function mutate(arr) {
+//   arr = [9,9,9]; // allowed
+// }
+
+// Because:
+
+// arr is a function parameter
+
+// It is NOT declared with const
+
+// Even if it were const arr, reassignment would fail
+
+// Example:
+
+// function test(const arr) {} // ❌ invalid syntax
+
+//this will fail
+// const prevents reassignment of the variable reference, NOT modification of the value it points to.
+// const a = [1,2,3]
+// const b = a
+// a = [4,5,6]
+// console.log('%c🤪 ~ file: b:\program\JavaScript\Basic\const.js:44 [] -> a : ', 'color: #d73631', a);
+// console.log('%c🤪 ~ file: b:\program\JavaScript\Basic\const.js:46 [] -> b : ', 'color: #510969', b);
+
 
 // let a = 20;
 
