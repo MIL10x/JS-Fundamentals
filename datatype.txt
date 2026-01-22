@@ -1,0 +1,15 @@
+| Type Name   | Category  | Value Behavior      |
+| ----------- | --------- | ------------------- |
+| `String`    | Primitive | Copied by value     |
+| `Number`    | Primitive | Copied by value     |
+| `BigInt`    | Primitive | Copied by value     |
+| `Boolean`   | Primitive | Copied by value     |
+| `Undefined` | Primitive | Copied by value     |
+| `Null`      | Primitive | Copied by value     |
+| `Symbol`    | Primitive | Copied by value     |
+| `Object`    | Reference | Copied by reference |
+| `Array`     | Reference | Copied by reference |
+| `Function`  | Reference | Copied by reference |
+| `Date`      | Reference | Copied by reference |
+| `Map`       | Reference | Copied by reference |
+| `Set`       | Reference | Copied by reference |

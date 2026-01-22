@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stopwatch</title>
+    <style>
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            font-family: 'Segoe UI', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            flex-direction: column;
+        }
+
+        .clock {
+            background: #1e1e1e;
+            padding: 20px 40px;
+            border-radius: 10px;
+            font-size: 48px;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+        }
+
+        button {
+            background: #4cafef;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 5px;
+        }
+
+        button:hover {
+            background: #3aa5e0;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="clock" id="clock">00:00:00</div>
+    <div>
+        <button onclick="startStopwatch()">Start</button>
+        <button onclick="stopStopwatch()">Stop</button>
+        <button onclick="resetStopwatch()">Reset</button>
+    </div>
+
+    <script>
+        let hours = 0, minutes = 0, seconds = 0;
+        let intervalId = null;
+        let timeoutId = null;
+
+        function updateDisplay() {
+            let h = String(hours)
+            let m = String(minutes)
+            let s = String(seconds)
+            document.getElementById('clock').textContent = `${h}:${m}:${s}`;
+        }
+
+        function tick() {
+            seconds++;
+            if (seconds >= 60) {
+                seconds = 0;
+                minutes++;
+            }
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+            updateDisplay();
+        }
+
+        function startStopwatch() {
+            if (intervalId === null) {
+                timeoutId = setTimeout(() => {
+                    intervalId = setInterval(tick, 1000); 
+                }, 1000);
+            }
+        }
+
+        function stopStopwatch() {
+            clearInterval(intervalId);
+            clearTimeout(timeoutId);
+            intervalId = null;
+        }
+
+        function resetStopwatch() {
+            stopStopwatch();
+            hours = 0;
+            minutes = 0;
+            seconds = 0;
+            updateDisplay();
+        }
+
+        updateDisplay();
+    </script>
+
+</body>
+</html>

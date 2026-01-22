@@ -1,0 +1,51 @@
+| Feature            | `forEach()`                                                         | `map()`                                             |
+| ------------------ | ------------------------------------------------------------------- | --------------------------------------------------- |
+| **Purpose**        | Executes a function for each array element                          | Transforms each element and **returns a new array** |
+| **Return Value**   | `undefined`                                                         | A **new array** with transformed values             |
+| **Original Array** | Not changed (unless mutated inside loop)                            | Not changed (unless mutated inside loop)            |
+| **Chainable**      | ❌ No                                                                | ✅ Yes (can chain other array methods)               |
+| **Use case**       | When you want side effects like `console.log` or `DOM manipulation` | When you want to **transform data**                 |
+
+
+| Situation                         | Use Arrow or Normal? |
+| --------------------------------- | -------------------- |
+| Inside `map`, `filter`, `forEach` | ➤ Arrow              |
+| Inside a class (preserve `this`)  | ➤ Arrow              |
+| Need reusable named function      | ➤ Normal             |
+| Using `arguments` object          | ➤ Normal             |
+| Creating a constructor            | ➤ Normal             |
+| Function before declaration       | ➤ Normal (hoisted)   |
+
+
+| Feature             | Arrow            | Named          | Anonymous        | Constructor         | Callback             |
+| ------------------- | ---------------- | -------------- | ---------------- | ------------------- | -------------------- |
+| Short syntax        | ✅ `() => {}`     | ❌ `function()` | ✅ `function(){}` | ❌ `function A(){}`  | ✅ `() => {}`         |
+| `this` context      | ❌ inherits outer | ✅ Own `this`   | ✅ Own `this`     | ✅ `this.name`       | ✅ depends on context |
+| Reusable            | ✅                | ✅              | ❌ (inline only)  | ✅ via `new`         | ✅                    |
+| Used in classes     | ✅ (inside)       | ✅ (method)     | ❌                | ❌ (used *as* class) | ❌                    |
+| Passed to functions | ✅                | ✅              | ✅                | ❌                   | ✅ (main purpose)     |
+
+
+| Function Type | Has `this` binding?       |
+| ------------- | ------------------------- |
+| Arrow ❌       | Inherits from outer scope |
+| Named ✅       | Has its own `this`        |
+| Anonymous ✅   | Has its own `this`        |
+| Constructor ✅ | Used to set `this`        |
+| Callback ✅    | Depends how you pass it   |
+
+| Situation                                 | Operator |
+| ----------------------------------------- | -------- |
+| Set default **only if null or undefined** | `??`     |
+| Conditionally return based on **truthy**  | `&&`     |
+| Avoid defaulting for valid falsy values   | `??`     |
+
+| Method               | Syntax Example                  | Use Case                         |
+| -------------------- | ------------------------------- | -------------------------------- |
+| Object Literal       | `{ key: value }`                | Simple and quick                 |
+| Constructor Function | `new Func()`                    | Before ES6, reusable objects     |
+| Class                | `new Class()`                   | Modern OOP                       |
+| Object.create()      | `Object.create(obj)`            | Inheritance                      |
+| Factory Function     | `function() { return { ... } }` | Custom logic for object creation |
+| JSON                 | `JSON.parse()`                  | Parsing server data              |
+| `new Object()`       | `new Object()`                  | Rarely used                      |
