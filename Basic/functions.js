@@ -93,3 +93,26 @@ person2.greet(); // Hello undefined
 
 // const greetHello = greet("Hello"); // closure
 // console.log(greetHello("kumar")); // Hello, kumar
+
+//class to function
+class Person {
+  greet() {}
+}
+const person = new Person()
+
+//in function
+function Person() {}
+Person.prototype.greet = function () {};
+Person()
+
+
+// in class
+class Car {
+  constructor(model) {
+    this.model = model;
+  }
+}
+// in function 
+function Car(model) {
+  this.model = model;
+}

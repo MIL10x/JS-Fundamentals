@@ -2,12 +2,12 @@ const arr = [1, 2, 3, 4, "Hello", {name: "Vishal"}, [1,2,3], 4];
 // const arr2 = new Array();
 console.log(arr);
 
+
 const firstElement = arr[0]; // O(1)
 const arrLength = arr.length;
 const lastElement = arr[arrLength - 1];
 console.log('%c🤪 ~ file: b:\program\JavaScript\array.js:7 [] -> lastElement : ', lastElement);
 console.log(firstElement, arrLength, lastElement);
-
 
 
 const arr1 = [1,2,3]

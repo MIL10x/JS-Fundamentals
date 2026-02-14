@@ -27,19 +27,19 @@
 // numbers = [9, 8, 7]; 
 
 
-// const numbers = [1, 2, 3]; 
+const numbers = [1, 2, 3]; 
 
-// function mutate(arr) {
-//   arr.push(4);   // this is first array
-//   arr = [9, 9, 9];  //localy created array  this second array
-//   arr.push(10);
-//   return arr;
-// }
+function mutate(arr) {
+  arr.push(4);   // this is first array
+  arr = [9, 9, 9];  //localy created array  this second array
+  arr.push(10);
+  return arr;
+}
 
-// const result = mutate(numbers);
+const result = mutate(numbers);
 
-// console.log(numbers); 
-// console.log(result);  
+console.log(numbers); 
+console.log(result);  
 // function mutate(arr) {
 //   arr = [9,9,9]; // allowed
 // }
@@ -74,3 +74,4 @@
 
 // }
 // k()
+

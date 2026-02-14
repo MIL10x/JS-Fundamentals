@@ -15,6 +15,7 @@ set2.add(2)
 //clear
 set2.clear()
 
+
 console.log('%c🤪 ~ file: b:\program\JavaScript\set&map.js:2 [] -> set & set has 4 : ', 'color: #be08c8', set.has(4));
 //delete
 set.delete(5)
@@ -33,6 +34,7 @@ for(var f of set){
 
 
 //consversion
+console.log('%c Check')
 const a = [1,1,2,2,3,3];
 Array.from(a); //Array keyword
 const b = [...new Set(a)]  //converting to array

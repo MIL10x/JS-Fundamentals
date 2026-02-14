@@ -26,7 +26,7 @@
 // let value = 10;
 
 // function tricky() {
-//    // console.log(value); // throw error
+//    console.log(value); // throw error
 //     let value = 20;
 //     return function () {
 //         console.log(value); // so it not execute
@@ -59,16 +59,16 @@
 // }
 
 
-function f(){
-     let a=10 // declare first and use in condition and and out it will work
-    if(true){
-        let a=20; // declare inside it will work inside of the block
-        console.log(a)
-    }
-    console.log(a);
-}
+// function f(){
+//      let a=10 // declare first and use in condition and and out it will work
+//     if(true){
+//         let a=20; // declare inside it will work inside of the block
+//         console.log(a)
+//     }
+//     console.log(a);
+// }
 
-f()
+// f()
 
 
 //loop to prefer
