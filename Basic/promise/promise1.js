@@ -1,4 +1,4 @@
-// //A Promise represents the eventual outcome (fulfillment or failure) of an asynchronous operation. It has three states: pending, fulfilled, and rejected
+//A Promise represents the eventual outcome (fulfillment or failure) of an asynchronous operation. It has three states: pending, fulfilled, and rejected
 
 // //classic promise
 // const promise = new Promise((resolve, reject) => {

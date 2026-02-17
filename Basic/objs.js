@@ -256,7 +256,11 @@ console.log('%c🤪 ~ file: b:\program\JavaScript\Basic\objs.js:55 [] -> user : 
 //   return a + b;
 // };  syntax sugar
 
+// let cache = {}
+// let l = 1
+// cache[l] = l
 
+// one of the method to store value
 
 // "hello".toUpperCase 
 
